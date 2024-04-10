@@ -33,7 +33,7 @@ function LoginForm() {
 
     const submit = async () => {
         try {
-            const response = await axios.post('http://keycloak.route53testdemo.fun/realms/oauth/protocol/openid-connect/token', 
+            const response = await axios.post('https://keycloak.route53testdemo.fun/realms/oauth/protocol/openid-connect/token', 
                 new URLSearchParams({
                     'grant_type': 'password',
                     'client_id': clientId,

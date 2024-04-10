@@ -1,0 +1,40 @@
+{
+    "containerDefinitions": [
+        {
+            "name": "frontend-container",
+            "image": "992382462614.dkr.ecr.us-west-2.amazonaws.com",
+            "cpu": 256,
+            "memory": 512,
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "systemControls": []
+        }
+    ],
+    "family": "frontend-family",
+    "executionRoleArn": "arn:aws:iam::992382462614:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "volumes": [],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "tags": [{
+        "key": "frontend",
+        "value": "Latest"
+    }]
+}
